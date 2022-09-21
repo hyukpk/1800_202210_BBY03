@@ -1,6 +1,7 @@
 ## My Web Application (Add your Title here)
 
 * [General info](#general-info)
+* My name is Hyuk, I am excited to do this project because I feel good about our project idea.
 * [Technologies](#technologies)
 * [Contents](#content)
 
