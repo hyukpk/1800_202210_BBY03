@@ -1,13 +1,16 @@
 ## My Web Application (Add your Title here)
 
 * [General info](#general-info)
-* My name is Hyuk, I am excited to do this project because I feel good about our project idea.
 * [Technologies](#technologies)
 * [Contents](#content)
 
 ## General Info
+<<<<<<< HEAD
 This browser based web application to ...
 * Hi my name is Ravdeep, I'm excited about this project because I get a chance to work on something hands on and see the result of my work.
+=======
+* Hi my name is Hyuk, I am excited to do this project because I am confident about our project idea.
+>>>>>>> 41c7b889815f62c54f6edd69f89f2741b5d34fba
 	
 ## Technologies
 Technologies used for this project:
