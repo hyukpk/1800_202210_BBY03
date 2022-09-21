@@ -2,6 +2,7 @@
 
 * [General info](#general-info)
 * My name is Hyuk, I am excited to do this project because I feel good about our project idea.
+* My name is Shawn, I am excited to do this project because I enjoy working in a group.
 * [Technologies](#technologies)
 * [Contents](#content)
 
