@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+* Hi my name is Ravdeep, I'm excited about this project because I get a chance to work on something hands on and see the result of my work
 	
 ## Technologies
 Technologies used for this project:
