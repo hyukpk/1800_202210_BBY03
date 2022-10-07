@@ -11,7 +11,7 @@ This browser based web application to ...
 * Hi my name is Hyuk, I am excited to do this project because I am confident about our project idea.
 * Hi my name is SHawn, I am excited to do this project because I like to code.
 
-
+	
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
