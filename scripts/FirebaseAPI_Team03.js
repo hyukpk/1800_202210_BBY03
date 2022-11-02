@@ -1,14 +1,21 @@
 //----------------------------------------
 //  Your web app's Firebase configuration
 //----------------------------------------
-var firebaseConfig = {
-  apiKey: "AIzaSyBBVp3B6F5xE2jWvqbrpPxKE7NFsygH8ew",
-  authDomain: "comp1800-202230-a8792.firebaseapp.com",
-  projectId: "comp1800-202230-a8792",
-  storageBucket: "comp1800-202230-a8792.appspot.com",
-  messagingSenderId: "998802945751",
-  appId: "1:998802945751:web:ceb286f46cb60954632292"
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAiU_BMGINm2Vcwp7Tuuz-zLBG9wriTyrM",
+  authDomain: "comp1800-relaxapp.firebaseapp.com",
+  projectId: "comp1800-relaxapp",
+  storageBucket: "comp1800-relaxapp.appspot.com",
+  messagingSenderId: "766877106873",
+  appId: "1:766877106873:web:a632edd08e3c13a1b65168"
 };
+
 
 //--------------------------------------------
 // initialize the Firebase app
