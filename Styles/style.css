@@ -3,5 +3,12 @@
     position: relative; top: 100px;
 }
 
+#frontbody{
+    background-size: cover;
 
+}
 
+#backbody{
+    background-size: cover;
+
+}
