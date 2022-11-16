@@ -29,6 +29,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script> 
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <link type="text/css" rel="stylesheet" href="/Styles/style.css" />
 
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
@@ -47,11 +48,17 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-
-    <img id="front body" src="images/diagramfront1.svg" alt="front" usemap="#bodymapfront">
-
-
-    <img id="back body" src="images/diagramback1.svg" alt="back" usemap="#bodymapback">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img id="frontbody" src="images/diagramfront1.svg" alt="front" usemap="#bodymapfront" class="rounded float-end">
+            </div>
+            <div class="col">
+                <img id="backbody" src="images/diagramback1.svg" alt="back" usemap="#bodymapback" class="rounded float-start">
+            </div>
+        </div>
+    </div>
+    
         
     <map name="bodymapback">
         <area shape="rect" coords="96,209,170,237" href="solutions.html" alt="greatcontent">
