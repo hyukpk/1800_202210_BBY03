@@ -43,31 +43,29 @@
   <!-- a reference to a navbar-->
   <nav id="navbarPlaceholder"></nav>
 
+<div class="container">
+  <h1>Some popular hikes</h1>
+  <!-- Here is container for cards  -->
   <div class="container">
-    <h2>Exercises for <span id="bodyPartName">this body part</span></h2>
-    <div id="details-go-here"></div>
-    <template id="CardTemplate">
-      <div class="card">
-          <img class="card-img-top">
-          <div class="card-body">
-              <h5 class="title">placeholder</h5>
-              <p class="level">placeholder</p>
-              <p class="season">placeholder</p>
-              <p class="scrambled">placeholder</p>
-              <p class="flooded">placeholder</p>
-              <br>
-              <button type="button" class="btn btn-sm btn-outline-secondary ">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Favourite</button>
-              <p class="description">This card has supporting text below as a natural lead-in to additional content.
-              </p>
-          </div>
+      <div id="exercises-go-here" class="row row-cols-auto">
       </div>
-    </template>
-    <div class="container">
-        <div id="CardGroup" class="row row-cols-auto">
-        </div>
     </div>
+</div>
+
+<!-- Templates for general use, not displayed -->
+<template id="cardTemplate">
+  <div class="card py-2 mx-2" style="width: 18rem;">
+      <img class="card-image card-img-top" src=" ..." alt="...">
+      <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <br>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+          <a class="btn btn-primary card-href" id="read-more">Read more ...</a>
+      </div>
   </div>
+</template>
+
 
   <!-- a reference to our footer -->
   <nav id="footerPlaceholder"></nav>
