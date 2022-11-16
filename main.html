@@ -47,15 +47,20 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-
-    <img id="front body" src="images/diagramfront1.svg" alt="front" usemap="#bodymapfront">
-
-
-    <img id="back body" src="images/diagramback1.svg" alt="back" usemap="#bodymapback">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img id="front body" src="images/diagramfront1.svg" alt="front" usemap="#bodymapfront" >
+            </div>
+            <div class="col">
+                <img id="back body" src="images/diagramback1.svg" alt="back" usemap="#bodymapback">
+            </div>
+        </div>
+    </div>
         
     <map name="bodymapback">
-        <area shape="rect" coords="96,209,170,237" href="solutions.html" alt="greatcontent">
-        <area shape="rect" coords="89, 102, 172, 153" href="solutions.html" alt="greatcontent">
+        <area shape="rect" coords="96,209,170,237" href="lowerback.html" alt="greatcontent" class="tooltip-test" title="Lower Back">
+        <area shape="rect" coords="89, 102, 172, 153" href="upperback.html" alt="greatcontent" class="tooltip-test" title="Upper Back">
     </map>
     <map name="bodymapfront">
     </map>
@@ -66,8 +71,9 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
-    <script src="./scripts/skeleton.js"></script>
+    <script src="./Scripts/FirebaseAPI_Team03.js"></script>
+    <script src="./Scripts/skeleton.js"></script>
+    <script src="./Scripts/main.js"></script>
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
