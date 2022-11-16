@@ -1,6 +1,7 @@
 function loadSkeleton(){
     console.log($('#navbarPlaceholder').load('./nav.html'));
     console.log($('#footerPlaceholder').load('./footer.html'));
+    console.log($('#sidebarPlaceHolder').load('./text/sidebar.html'));
 }
 loadSkeleton();
 
