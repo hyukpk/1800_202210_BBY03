@@ -22,7 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
   <!-- Link to styles of your own -->
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
@@ -39,7 +39,7 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Solution</h1>
-        <p class="lead text-muted">Skeleton to Exercise page.</p>
+        <p class="lead text-muted" onload="displaySolutions()">Skeleton to Exercise page.</p>
       </div>
     </div>
   </section>
@@ -47,7 +47,7 @@
   <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="solutioncard">
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>
@@ -56,7 +56,7 @@
               <p class="card-text">هذه بطاقة أوسع مع نص داعم أدناه كمقدمة طبيعية لمحتوى إضافي. هذا المحتوى أطول قليلاً.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">عرض</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="bannerConfirm()">Favrouite</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">تعديل</button>
                 </div>
                 <small class="text-muted">9 دقائق</small>
@@ -198,6 +198,7 @@
     </div>
   </div>
 
+
   <!-- a reference to our footer -->
   <nav id="footerPlaceholder"></nav>
 
@@ -208,7 +209,7 @@
 
   <!-- Link to scripts of your own -->
   <script src="./scripts/skeleton.js"></script>
-  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/script.js"></script>
 
 </body>
 

@@ -1,4 +1,7 @@
-function sayHello() {
-    
+function bannerConfirm() {
+    if (!alert('Added to Favrouites')) {
+        e.preventDefault();
+    }
+
+
 }
-//sayHello();
