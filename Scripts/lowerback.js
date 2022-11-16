@@ -37,3 +37,39 @@ function writeExercises() {
         length:"3",
    });
 }
+
+function displayCards(collection) {
+    let cardTemplate = document.getElementById("cardTemplate");
+
+    db.collection(collection).get()
+        .then(snap => {
+            //var i = 1;  //if you want to use commented out section
+            snap.forEach(doc => { //iterate thru each doc
+                var title = doc.data().name;        // get value of the "name" key
+                var steps = doc.data().steps;   // get value of the "details" key
+                //var difficulty = doc.data().difficulty;
+                //var length = doc.data().length;
+				//var exerciseID = doc.data().code;    //get unique ID to each hike to be used for fetching right image
+                let newcard = cardTemplate.content.cloneNode(true);
+
+                //update title and text and image
+                newcard.querySelector('.card-title').innerHTML = title;
+                newcard.querySelector('.card-text').innerHTML = steps;
+                //newcard.querySelector('.card-image').src = `./images/${exerciseID}.jpg`; //Example: NV01.jpg
+                //newcard.querySelector('.card-difficulty').innerHTML = difficulty;
+                //newcard.querySelector('.card-length').innerHTML = length;
+
+
+                //give unique ids to all elements for future use
+                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+
+                //attach to gallery
+                document.getElementById(collection + "-go-here").appendChild(newcard);
+                //i++;   //if you want to use commented out section
+            })
+        })
+}
+
+displayCards("exercises");
