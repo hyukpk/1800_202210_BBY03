@@ -12,3 +12,11 @@
     background-size: cover;
 
 }
+
+.modal-dialog{
+    max-width: 100%;
+}
+
+.modal-content{
+    height: 100%;
+}

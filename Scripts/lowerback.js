@@ -81,18 +81,3 @@ displayCards("exercises");
 
 
 
-
-// manual controls outside YT
-var playBtn = document.getElementById('playBtn')
-playBtn.addEventListener('click', function (event) {
-    console.log('play')
-    player.playVideo()
-})
-
-var pauseBtn = document.getElementById('pauseBtn')
-pauseBtn.addEventListener('click', function (event) {
-    console.log('pause')
-    player.pauseVideo()
-})
-
-
