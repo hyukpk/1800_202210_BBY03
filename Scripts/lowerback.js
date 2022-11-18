@@ -1,3 +1,18 @@
+var currentUser;
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        currentUser = db.collection("users").doc(user.uid);   //global
+        console.log(currentUser);
+
+        // the following functions are always called when someone is logged in
+        populateCardsDynamically()
+    } else {
+        // No user is signed in.
+        console.log("No user is signed in");
+        window.location.href = "login.html";
+    }
+});
+
 function writeExercises() {
     var exerciseRef = db.collection("exercises");
 
@@ -41,43 +56,58 @@ function writeExercises() {
    });
 }
 
-function displayCards(collection) {
-    let cardTemplate = document.getElementById("cardTemplate");
+function populateCardsDynamically() {
+    let exerciseCardTemplate = document.getElementById("cardTemplate");
+    let exerciseCardGroup = document.getElementById("exercises-go-here");
 
-    db.collection(collection).get()
-        .then(snap => {
-            //var i = 1;  //if you want to use commented out section
-            snap.forEach(doc => { //iterate thru each doc
-                var title = doc.data().name;        // get value of the "name" key
-                var steps = doc.data().steps;   // get value of the "details" key
-                var video = doc.data().video;
+    db.collection("exercises")
+        .get()
+        .then(allExercises => {
+            allExercises.forEach(doc => {
+                var title = doc.data().name; //gets the name field
+                var steps = doc.data().steps; //gets the unique ID field
+                var length = doc.data().length; //gets the length field
+                var exerciseID = doc.data().code;
                 var difficulty = doc.data().difficulty;
-                var length = doc.data().length;
-				var exerciseID = doc.data().code;    //get unique ID to each hike to be used for fetching right image
-                let newcard = cardTemplate.content.cloneNode(true);
+                var video = doc.data().video;
+                let testExCard = exerciseCardTemplate.content.cloneNode(true);
+                testExCard.querySelector('.card-title').innerHTML = title;
+                testExCard.querySelector('.card-length').innerHTML ="Length of time: " +  length + " Minutes";
+                testExCard.querySelector('.card-difficulty').innerHTML = "Level of Difficulty: " + difficulty;
+                testExCard.querySelector('.card-text').innerHTML = steps;
+                testExCard.querySelector('.video-id').src = video;
+                testExCard.querySelector('i').id = 'save-' + exerciseID;            
+                testExCard.querySelector('i').onclick = () => saveBookmark(exerciseID);
 
-                //update title and text and image
-                newcard.querySelector('.card-title').innerHTML = title;
-                newcard.querySelector('.card-text').innerHTML = steps;
-                newcard.querySelector('.video-id').src = video;
-                newcard.querySelector('img').src = `./images/${exerciseID}.jpg`; //Example: NV01.jpg
-                newcard.querySelector('.card-difficulty').innerHTML = "Level of Difficulty: " + difficulty;
-                newcard.querySelector('.card-length').innerHTML ="Length of time: " +  length + " minutes";
-
-
-                //give unique ids to all elements for future use
-                // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
-                // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
-                // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
-
-                //attach to gallery
-                document.getElementById(collection + "-go-here").appendChild(newcard);
-                //i++;   //if you want to use commented out section
+                exerciseCardGroup.appendChild(testExCard);
             })
         })
 }
 
-displayCards("exercises");
 
+
+
+function saveBookmark(exerciseID) {
+    currentUser.set({
+            bookmarks: firebase.firestore.FieldValue.arrayUnion(exerciseID)
+        }, {
+            merge: true
+        })
+        .then(function () {
+            console.log("bookmark has been saved for: " + currentUser);
+            var iconID = 'save-' + exerciseID;
+            //console.log(iconID);
+						//this is to change the icon of the hike that was saved to "filled"
+            document.getElementById(iconID).innerText = 'bookmark';
+        });
+}
+
+currentUser.get().then(userDoc => {
+    //get the user name
+    var bookmarks = userDoc.data().bookmarks;
+    if (bookmarks.includes(exerciseID)) {
+      document.getElementById('save-' + exerciseID).innerText = 'bookmark';
+    }
+})
 
 
