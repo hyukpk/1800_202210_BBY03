@@ -26,7 +26,9 @@
 
 </head>
 
+
 <body>
+
 
   <!------------------------------>
   <!-- Your HTML Layout go here -->
@@ -35,7 +37,7 @@
   <!-- a reference to a navbar-->
   <nav id="navbarPlaceholder"></nav>
 
-  <div class="px-4 py-5 my-5 text-center">
+  <div class="m-5 p-5 text-center">
     <img src="./images/logo.jpg" alt="logo" width="250" height="250">
     <h2 class="display-5 fw-bold">Welcome to our web app</h2>
     <div class="col-lg-6 mx-auto">
@@ -52,7 +54,7 @@
  
 
   <!-- a reference to our footer -->
-  <nav id="footerPlaceholder"></nav>
+  <nav id="footerPlaceholder" class="footer"></nav>
 
 
   <!---------------------------------------------->
@@ -64,5 +66,12 @@
   <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
-
+<style>
+  .footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  </style>
 </html>
