@@ -17,42 +17,37 @@ function writeExercises() {
     var exerciseRef = db.collection("exercises");
 
     exerciseRef.add({
-        code:"LB-CP",
-        name: "Child's Pose",  
-        difficulty: "moderate",  
-        steps: "1. With your hands and knees on the ground, sink back through your hips to rest them on your heels.<br>"
-         + "2. Hinge at your hips as you fold forward, walking your hands out in front of you.<br>"
-         + "3. Rest your belly on your thighs. 4. Extend your arms in front of or alongside your body with your palms facing up.<br>"
-         + "4. Focus on breathing deeply and relaxing any areas of tension or tightness. 5. Hold this pose for up to 1 minute.",
-        length: "10",
-        video: "https://www.youtube.com/embed/X-OGH5-gLUs?start=7",
+        code:"Q-KQS",
+        name: "Kneeling Quad Stretch",  
+        difficulty: "Easy",  
+        steps: "1. Kneel on the side of the leg you want to stretch and bring the other side forward in a lunge position <br>"
+        + "2. Flatten out your lower back and keep shoulders and chest upright<br>"
+        + "3. Bend forward from the hip to the knee even more to stretch the right hip and quad<br>"
+        + "4. Hold for 30 seconds and then switch knees",
+        length: "2",
+        video: "https://www.youtube.com/embed/U7AOY3obRv4?start=5",
     });
     exerciseRef.add({
-        code:"LB-PFS",
-        name: "Piriformis stretch ",  
-        difficulty: "moderate",
-        steps: "1. Lie on your back with both knees bent and your feet flat on the floor.<br>"
-        + "2. Place your right ankle at the base of your left thigh.<br>"
-        + "3. Then, place your hands behind your left thigh and pull up toward your chest until you feel a stretch.<br>"
-        + "4. Hold this position for 30 seconds to 1 minute.<br>"
-        +" 5. Then do the opposite side. ",
-        length: "3",
-        video: "https://www.youtube.com/embed/eKp2f5-jRbI?start=20",
+        code:"Q-SQS",
+        name: "Standing Quad Stretch",  
+        difficulty: "Easy",
+        steps: "1. Stand on your left foot and grab your right shin by bending your leg behind you<br>"
+        +"2. Tuck your pelvis in, pull your shin toward your glutes, making sure your knee is pointing to the ground. Try not to pull the knee backward or sideways<br>"
+        +"3. Hold for 30 seconds, then switch sides",
+        length: "2",
+        video: "https://www.youtube.com/embed/zFpq_j453hQ",
 
    });
    exerciseRef.add({
-        code:"LB-ST",
-        name: "Seated Spinal Twist",    
-        difficulty: "easy",
-        steps:"1. Sit on the floor with both legs extended out in front.<br>"
-        + "2. Bend your left knee and place your foot to the outside of your right thigh.<br>"
-        + "3. Place your right arm on the outside of your left thigh.<br>"
-        + "4. Place your left hand behind you for support.<br>"
-        + "5. Starting at the base of your spine, twist to the left side.<br>"
-        + "6. Hold this pose for up to 1 minute.<br>"
-        + "7. Repeat on the other side.",
-        length:"3",
-        video: "https://www.youtube.com/embed/ciGK6HyYqV4",
+        code:"Q-LQS",
+        name: "Lying Quad Stretch",    
+        difficulty: "Easy",
+        steps:"1. Lie in a face-down position, propping your head on your left hand. Alternatively, you can lie on your side to perform this stretch. <br>"
+        + "2. After a couple of seconds, pull your right foot toward your butt and bend your left knee to stabilize yourself.<br>"
+        + "3. Hold onto your ankle and maintain the position for 30 seconds before returning to the starting position.<br>"
+        + "4. Switch sides, pulling your left foot toward your back and bending your right knee.",
+        length:"2",
+        video: "https://www.youtube.com/embed/599Tvr-JrBc?start=5",
    });
 }
 
@@ -60,7 +55,7 @@ function populateCardsDynamically() {
     let exerciseCardTemplate = document.getElementById("cardTemplate");
     let exerciseCardGroup = document.getElementById("exercises-go-here");
 
-    db.collection("lowerBack")
+    db.collection("quad")
         .get()
         .then(allExercises => {
             allExercises.forEach(doc => {

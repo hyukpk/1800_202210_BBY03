@@ -17,42 +17,40 @@ function writeExercises() {
     var exerciseRef = db.collection("exercises");
 
     exerciseRef.add({
-        code:"LB-CP",
-        name: "Child's Pose",  
-        difficulty: "moderate",  
-        steps: "1. With your hands and knees on the ground, sink back through your hips to rest them on your heels.<br>"
-         + "2. Hinge at your hips as you fold forward, walking your hands out in front of you.<br>"
-         + "3. Rest your belly on your thighs. 4. Extend your arms in front of or alongside your body with your palms facing up.<br>"
-         + "4. Focus on breathing deeply and relaxing any areas of tension or tightness. 5. Hold this pose for up to 1 minute.",
-        length: "10",
-        video: "https://www.youtube.com/embed/X-OGH5-gLUs?start=7",
+        code:"UB-EP",
+        name: "Eagle Pose",  
+        difficulty: "easy",  
+        steps: "1. Place right elbow on left elbow <br>"
+        + "2. Now take your left hand and interlace it around the right arm<br>"
+        + "3. In this position you can apply more pressure to feel your upper back opening<br>"
+        + "4. Hold the end position for 20-30 seconds<br>"
+        + "5. Repeat on the other side",
+        length: "3",
+        video: "https://youtube.com/embed/vuGnzLxRvZM?start=24",
     });
     exerciseRef.add({
-        code:"LB-PFS",
-        name: "Piriformis stretch ",  
+        code:"UP-UTS",
+        name: "Upper Trapezius Stretch ",  
         difficulty: "moderate",
-        steps: "1. Lie on your back with both knees bent and your feet flat on the floor.<br>"
-        + "2. Place your right ankle at the base of your left thigh.<br>"
-        + "3. Then, place your hands behind your left thigh and pull up toward your chest until you feel a stretch.<br>"
-        + "4. Hold this position for 30 seconds to 1 minute.<br>"
-        +" 5. Then do the opposite side. ",
-        length: "3",
-        video: "https://www.youtube.com/embed/eKp2f5-jRbI?start=20",
+        steps: "1. Start either in a standing or seated position.<br>"
+        +"2. Place one of your hands on the opposite side of your head and tuck the other hand behind your back.<br>"
+        +"3. Now bring the head down towards your shoulder.<br>"
+        +"4. Use the hand on top to press your head down – to get a deeper stretch (Not too hard).<br>"
+        +"5. Hold for 20-30 seconds and do both sides",
+        length: "2",
+        video: "https://youtube.com/embed/vuGnzLxRvZM?start=107",
 
    });
    exerciseRef.add({
-        code:"LB-ST",
-        name: "Seated Spinal Twist",    
+        code:"UP-YWS",
+        name: "Y & W & Retract",    
         difficulty: "easy",
-        steps:"1. Sit on the floor with both legs extended out in front.<br>"
-        + "2. Bend your left knee and place your foot to the outside of your right thigh.<br>"
-        + "3. Place your right arm on the outside of your left thigh.<br>"
-        + "4. Place your left hand behind you for support.<br>"
-        + "5. Starting at the base of your spine, twist to the left side.<br>"
-        + "6. Hold this pose for up to 1 minute.<br>"
-        + "7. Repeat on the other side.",
+        steps:"1. Begin standing with your back straight <br>"
+        + "2. Make “W” shape with your arms. Bend both of arms to about 90 degree angle as you lower them to your stomach area and then squeeze your shoulder blades together. Hold for 2 breaths.<br>"
+        + "3. Make “Y” shape with your arms by extending both arms up. Hold for 2 breaths.<br>"
+        + "4. Hold 1-2 at each end point, Aim for 10 repetitions",
         length:"3",
-        video: "https://www.youtube.com/embed/ciGK6HyYqV4",
+        video: "https://youtube.com/embed/vuGnzLxRvZM?start=236",
    });
 }
 
@@ -60,7 +58,7 @@ function populateCardsDynamically() {
     let exerciseCardTemplate = document.getElementById("cardTemplate");
     let exerciseCardGroup = document.getElementById("exercises-go-here");
 
-    db.collection("lowerBack")
+    db.collection("upperBack")
         .get()
         .then(allExercises => {
             allExercises.forEach(doc => {

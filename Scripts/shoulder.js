@@ -17,42 +17,46 @@ function writeExercises() {
     var exerciseRef = db.collection("exercises");
 
     exerciseRef.add({
-        code:"LB-CP",
-        name: "Child's Pose",  
-        difficulty: "moderate",  
-        steps: "1. With your hands and knees on the ground, sink back through your hips to rest them on your heels.<br>"
-         + "2. Hinge at your hips as you fold forward, walking your hands out in front of you.<br>"
-         + "3. Rest your belly on your thighs. 4. Extend your arms in front of or alongside your body with your palms facing up.<br>"
-         + "4. Focus on breathing deeply and relaxing any areas of tension or tightness. 5. Hold this pose for up to 1 minute.",
-        length: "10",
-        video: "https://www.youtube.com/embed/X-OGH5-gLUs?start=7",
+        code:"S-SR",
+        name: "Shoulder Rolls",  
+        difficulty: "Easy",  
+        steps: "1. Stand with feet hip-width apart <br>"
+        + "2. Let the arms hang down at the sides of the body<br>"
+        + "3. Breathe in and lift the shoulders up towards the ears<br>"
+        + "4. Exhale and drop the shoulders back<br>"
+        + "5. Move elblows forward, feeling the stretch at the back of the shoulders<br>"
+        + "6. Repeat as many times as you need to",
+        length: "2",
+        video: "https://www.youtube.com/embed/sGi0fR3L80g",
     });
     exerciseRef.add({
-        code:"LB-PFS",
-        name: "Piriformis stretch ",  
-        difficulty: "moderate",
-        steps: "1. Lie on your back with both knees bent and your feet flat on the floor.<br>"
-        + "2. Place your right ankle at the base of your left thigh.<br>"
-        + "3. Then, place your hands behind your left thigh and pull up toward your chest until you feel a stretch.<br>"
-        + "4. Hold this position for 30 seconds to 1 minute.<br>"
-        +" 5. Then do the opposite side. ",
-        length: "3",
-        video: "https://www.youtube.com/embed/eKp2f5-jRbI?start=20",
+        code:"S-CBS",
+        name: "Cross Body Shoulder Stretch",  
+        difficulty: "Easy",
+        steps: "1. Stand with feet hip-width apart<br>"
+        +"2. Stretch the right arm out straight.<br>"
+        +"3. Bring the right arm across the body, so that the hand points to the floor on the other side of the left leg.<br>"
+        +"4. Bend the left arm at the elbow.<br>"
+        +"5. Hook the left forearm under the right arm, supporting the right arm above the elbow.<br>"
+        +"6. Use the left forearm to pull the right arm further in and across the body, stretching the back of the right shoulder. <br>"
+        +"7. Hold this for 20 seconds, then repeat the stretch on the other side.",
+        length: "1",
+        video: "https://www.youtube.com/embed/vkmTnIr944M",
 
    });
    exerciseRef.add({
-        code:"LB-ST",
-        name: "Seated Spinal Twist",    
-        difficulty: "easy",
-        steps:"1. Sit on the floor with both legs extended out in front.<br>"
-        + "2. Bend your left knee and place your foot to the outside of your right thigh.<br>"
-        + "3. Place your right arm on the outside of your left thigh.<br>"
-        + "4. Place your left hand behind you for support.<br>"
-        + "5. Starting at the base of your spine, twist to the left side.<br>"
-        + "6. Hold this pose for up to 1 minute.<br>"
-        + "7. Repeat on the other side.",
+        code:"S-TTN",
+        name: "Thread the Needle",    
+        difficulty: "Moderate",
+        steps:"1. Come onto your all fours with your hands directly under your shoulders and your knees underneath your hips. <br>"
+        + "2. Lift your right hand and slowly bring it over to the left with your palm facing up.<br>"
+        + "3. Rest your body on your right shoulder and turn your head to face to the left.<br>"
+        + "4. Make sure you’re not sinking onto your shoulder.<br>"
+        + "5. Hold this pose for 30 seconds.<br>"
+        + "6. Slowly release and come back to the original position.<br>"
+        + "7. Repeat on the opposite side.",
         length:"3",
-        video: "https://www.youtube.com/embed/ciGK6HyYqV4",
+        video: "https://www.youtube.com/embed/QK50Vso1NZI",
    });
 }
 
@@ -60,7 +64,7 @@ function populateCardsDynamically() {
     let exerciseCardTemplate = document.getElementById("cardTemplate");
     let exerciseCardGroup = document.getElementById("exercises-go-here");
 
-    db.collection("lowerBack")
+    db.collection("shoulder")
         .get()
         .then(allExercises => {
             allExercises.forEach(doc => {
