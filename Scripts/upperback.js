@@ -76,14 +76,18 @@ function populateCardsDynamically() {
                 testExCard.querySelector('.video-id').src = video;
                 testExCard.querySelector('i').id = 'save-' + exerciseID;            
                 testExCard.querySelector('i').onclick = () => saveBookmark(exerciseID);
+                currentUser.get().then(userDoc => {
+                    //get the user name
+                    var bookmarks = userDoc.data().bookmarks;
+                    if (bookmarks.includes(exerciseID)) {
+                      document.getElementById('save-' + exerciseID).innerText = 'bookmark';
+                    }
+                })
 
                 exerciseCardGroup.appendChild(testExCard);
             })
         })
 }
-
-
-
 
 function saveBookmark(exerciseID) {
     currentUser.set({
@@ -100,12 +104,6 @@ function saveBookmark(exerciseID) {
         });
 }
 
-currentUser.get().then(userDoc => {
-    //get the user name
-    var bookmarks = userDoc.data().bookmarks;
-    if (bookmarks.includes(exerciseID)) {
-      document.getElementById('save-' + exerciseID).innerText = 'bookmark';
-    }
-})
+
 
 
