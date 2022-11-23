@@ -56,6 +56,7 @@ function populateCardsDynamically() {
     let exerciseCardGroup = document.getElementById("exercises-go-here");
 
     db.collection("quad")
+        .orderBy("length")
         .get()
         .then(allExercises => {
             allExercises.forEach(doc => {

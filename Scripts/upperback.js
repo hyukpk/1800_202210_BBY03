@@ -59,6 +59,7 @@ function populateCardsDynamically() {
     let exerciseCardGroup = document.getElementById("exercises-go-here");
 
     db.collection("upperBack")
+        .orderBy("length")
         .get()
         .then(allExercises => {
             allExercises.forEach(doc => {
