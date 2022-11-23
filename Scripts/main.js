@@ -14,10 +14,15 @@ function insertName() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if a user is signed in:
         if (user) {
+
+            db.collection("users").doc(user.uid).get()
+            .then((snap)=>{
+
+                console.log(snap.data().name);
+                $("#name-goes-here").text(snap.data().name);
+            })
             // Do something for the currently logged-in user here: 
-            console.log(user.uid);
-            console.log(user.displayName);
-            user_Name = user.displayName;
+            
 
             //method #1:  insert with html only
             //document.getElementById("name-goes-here").innerText = user_Name;    //using javascript
