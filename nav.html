@@ -87,7 +87,8 @@
           <a class="btn btn-outline-dark" type="button" href="favourite.html">Favourites</a>
           <a class="btn btn-outline-dark" type="button" href="about.html">About</a>
           <a class="btn btn-outline-dark" type="button" href="loading.html">Settings</a>
-          <a class="btn btn-outline-dark" type="button" href="login.html">Sign up / Login</a>
+          <a class="btn btn-outline-dark" id="sbutton" type="button" href="login.html">Sign up / Login</a>
+          <button class="btn btn-outline-dark" id="lbutton" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Logout</button>
         </div>
       </div>
       <div class="container px-4">
@@ -99,3 +100,40 @@
     </div>
   </div>
 </nav>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Are you sure?</h1>
+      </div>
+      <div class="modal-footer p-1">
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-outline-dark" onclick="logout()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function logout() {
+  console.log("logging out user");
+  firebase.auth().signOut().then(() => {
+      window.location.href = "index.html";
+    }).catch((error) => {
+      console.log("error")
+    });
+}
+var currentUser;
+var x = document.getElementById("sbutton");
+var y = document.getElementById("lbutton");
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        x.style.display = "none";
+    } else {
+        y.style.display = "none";
+    }
+});
+</script>
