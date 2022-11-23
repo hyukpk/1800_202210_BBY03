@@ -5,12 +5,12 @@
 
 #frontbody{
     background-size: cover;
-
+    float: right !important;
 }
 
 #backbody{
     background-size: cover;
-
+    float: left !important;
 }
 
 .modal-dialog{
@@ -23,4 +23,29 @@
 
 .material-icons{
     cursor: pointer;
+}
+
+#ravCard{
+    position: relative;left: 500px;
+}
+
+#shawnsCard{
+    position: relative;left: 500px;
+}
+
+#hyukCard{
+    position: relative;left: 500px;
+}
+
+@media only screen and (max-width: 700px) {
+    
+#frontbody{
+    background-size: cover;
+    float: left !important;
+}
+
+#backbody{
+    background-size: cover;
+    float: left !important;
+}
 }
