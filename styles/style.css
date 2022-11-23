@@ -3,14 +3,8 @@
     position: relative; top: 100px;
 }
 
-#frontbody{
-    background-size: cover;
-    float: right !important;
-}
-
-#backbody{
-    background-size: cover;
-    float: left !important;
+.bodyimages {
+    text-align: center !important;
 }
 
 .modal-dialog{
