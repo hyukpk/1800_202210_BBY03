@@ -36,16 +36,3 @@
 #hyukCard{
     position: relative;left: 500px;
 }
-
-@media only screen and (max-width: 700px) {
-    
-#frontbody{
-    background-size: cover;
-    float: left !important;
-}
-
-#backbody{
-    background-size: cover;
-    float: left !important;
-}
-}
