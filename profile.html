@@ -34,7 +34,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
@@ -47,10 +47,10 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-    <div class="container m-5">
+    <div class="container mt-5 pt-5">
         <h1>User Profile </h1>
         <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
+            <fieldset class="m-5" id="personalInfoFields" disabled>
                 <div class="form-group">
                     <label>Name</label>
                     <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
@@ -64,7 +64,7 @@
                     <input type="text" id="countryInput" class="form-control" placeholder="Enter your country">
                 </div>
             </fieldset>
-            <div class="d-flex justify-content-end mt-5">
+            <div class="d-flex justify-content-end m-5">
                 <button type="button" class="btn btn-muted btn-outline-dark" onclick="editUserInfo()">Edit</button>
                 <span style="width: 10px"></span>
                 <button type="button" class="btn btn-secondary" onclick="saveUserInfo()">Save</button>
