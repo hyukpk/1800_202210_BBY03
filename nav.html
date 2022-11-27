@@ -49,7 +49,7 @@
           <a class="btn btn-outline-dark" type="button" href="main.html">Home</a>
           <a class="btn btn-outline-dark" type="button" href="favourite.html">Favourites</a>
           <a class="btn btn-outline-dark" type="button" href="about.html">About</a>
-          <a class="btn btn-outline-dark" type="button" href="profile.html">Settings</a>
+          <a class="btn btn-outline-dark" type="button" href="profile.html" id="profilebtn">Settings</a>
           <a class="btn btn-outline-dark" id="sbutton" type="button" href="login.html">Sign up / Login</a>
           <button class="btn btn-outline-dark" id="lbutton" type="button" onclick="logout()">Logout</button>
         </div>
@@ -70,10 +70,12 @@ function logout() {
 var currentUser;
 var x = document.getElementById("sbutton");
 var y = document.getElementById("lbutton");
+var z = document.getElementById("profilebtn")
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         x.style.display = "none";
     } else {
+        z.style.display = "none";
         y.style.display = "none";
     }
 });
