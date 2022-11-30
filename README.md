@@ -9,7 +9,7 @@
 This browser based web application to ...
 * Hi my name is Ravdeep, I'm excited about this project because I get a chance to work on something hands on and see the result of my work.
 * Hi my name is Hyuk, I am excited to do this project because I am confident about our project idea.
-* Hi my name is SHawn, I am excited to do this project because I like to code.
+* Hi my name is Shawn, I am excited to do this project because I like to code.
 
 	
 ## Technologies
