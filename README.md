@@ -17,7 +17,6 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
 	
 ## Content
 Content of the project folder:
@@ -61,9 +60,4 @@ Firebase hosting files:
 ├── .firebase
 
 
-```
-
-Tips for file naming files and folders:
-* use lowercase with no spaces
-* use dashes (not underscore) for word separation
 
