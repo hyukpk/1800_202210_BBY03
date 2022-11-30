@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand text-dark" href="index.html">✿ Oni</a>
+    <a class="navbar-brand text-dark" href="../index.html">✿ Oni</a>
     <!--hamburger-->
     <div>
       <a
@@ -46,11 +46,11 @@
 
       <div class="offcanvas-body">
         <div class="d-grid gap-1">
-          <a class="btn btn-outline-dark" type="button" href="main.html">Home</a>
-          <a class="btn btn-outline-dark" type="button" href="favourite.html">Favourites</a>
-          <a class="btn btn-outline-dark" type="button" href="about.html">About</a>
-          <a class="btn btn-outline-dark" type="button" href="profile.html" id="profilebtn">Settings</a>
-          <a class="btn btn-outline-dark" id="sbutton" type="button" href="login.html">Sign up / Login</a>
+          <a class="btn btn-outline-dark" type="button" href="/main.html">Home</a>
+          <a class="btn btn-outline-dark" type="button" href="/nav/favourite.html">Favourites</a>
+          <a class="btn btn-outline-dark" type="button" href="/nav/about.html">About</a>
+          <a class="btn btn-outline-dark" type="button" href="/nav/profile.html" id="profilebtn">Settings</a>
+          <a class="btn btn-outline-dark" id="sbutton" type="button" href="/login.html">Sign up / Login</a>
           <button class="btn btn-outline-dark" id="lbutton" type="button" onclick="logout()">Logout</button>
         </div>
       </div>
@@ -62,7 +62,7 @@
 function logout() {
   console.log("logging out user");
   firebase.auth().signOut().then(() => {
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     }).catch((error) => {
       console.log("error")
     });
